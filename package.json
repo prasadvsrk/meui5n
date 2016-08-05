@@ -1,0 +1,10 @@
+{
+  "name": "SAP-UI5",
+  "version": "0.1.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "mongodb": "^2.2.5",
+    "node-inspector": "0.7.x"
+  }
+}

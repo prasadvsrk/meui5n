@@ -1,0 +1,113 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"_version": "1.1.0",
+		"id": "com.meui5ncrud.app",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.32.0"
+		}
+	},
+	"sap.ui": {
+		"_version": "1.1.0",
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		},
+		"supportedThemes": [
+			"sap_hcb",
+			"sap_bluecrystal"
+		]
+	},
+	"sap.ui5": {
+		"_version": "1.1.0",
+		"dependencies": {
+			"minUI5Version": "1.30.0",
+			"libs": {
+				"sap.ui.core": {},
+				"sap.m": {},
+				"sap.ui.layout": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.meui5ncrud.app.i18n.i18n"
+				}
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"viewType": "JS",
+				"routerClass": "sap.m.routing.Router",
+				"viewPath": "com.meui5ncrud.app.view",
+				"controlId": "appView",
+				"controlAggregation": "pages",
+				"transition": "slide"
+
+			},
+			"routes": [{
+				"name": "LandingPage",
+				"pattern": "",
+				"greedy": false,
+				"target": [
+					"LandingPage"
+				]
+			}, {
+				"name": "Details",
+				"pattern": "Details",
+				"greedy": false,
+				"target": [
+					"Details"
+				]
+			}
+			],
+			"targets": {
+				"LandingPage": {
+					"viewType": "JS",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "LandingPage"
+				},
+				"Details": {
+					"viewType": "JS",
+					"transition": "slide",
+					"clearAggregation": true,
+					"viewName": "Details"
+				}
+				
+			}
+		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
+	}
+}

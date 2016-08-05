@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+<script src="/resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m,sap.ui.table,sap.ui.layout"
+				data-sap-ui-theme="sap_bluecrystal"
+				data-sap-ui-resourceroots='{
+					"com.meui5ncrud.app" : "./"
+				}'>
+</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script>
+		
+				new sap.m.Shell({
+					app:  new sap.ui.core.ComponentContainer({
+						name : "com.meui5ncrud.app"
+					})
+				}).addStyleClass('mShell_css').placeAt("content");
+		</script>
+<link rel="stylesheet" type="text/css" href="css/style.css"> 
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
